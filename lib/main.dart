@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:todo/util/constant.dart';
+import 'package:todo/view/create_task_screen.dart';
 import 'package:todo/view/home_screen.dart';
 
 void main() async {
@@ -57,6 +58,7 @@ class _MyAppState extends State<MyApp> {
           initialRoute: HomeActivity.id,
           routes: {
             HomeActivity.id: (context) => const HomeActivity(),
+            CreateTaskActivity.id: (context) => const CreateTaskActivity(),
           },
         ));
   }

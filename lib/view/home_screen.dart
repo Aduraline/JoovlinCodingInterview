@@ -5,6 +5,8 @@ import 'package:todo/util/constant.dart';
 import 'package:todo/view/widget/empty_todo.dart';
 import 'package:todo/view/widget/item_todo.dart';
 
+import 'create_task_screen.dart';
+
 class HomeActivity extends StatefulWidget {
   static const String id = 'HomeActivity';
   const HomeActivity({Key? key}) : super(key: key);
@@ -53,7 +55,9 @@ class HomeActivityState extends State<HomeActivity> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: colorPurple,
         child: const Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, CreateTaskActivity.id);
+        },
       ),
     );
   }
